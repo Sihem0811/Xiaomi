@@ -12,7 +12,12 @@ import io.cucumber.junit.CucumberOptions;
 				
 					glue="stepdef",
 		
-				  plugin = {"pretty", "html:target/Cucumber-report.html"}
+				  plugin = {"pretty",
+							"html:target/Cucumber-report.html",
+		                    "json:target/cucumber.json",
+                             "junit:target/cucumber-report.xml"
+						   }
+
 		)
 
 public class Runner {
